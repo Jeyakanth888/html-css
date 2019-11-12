@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g id="View" transform="translate(-33 -80)">
+    <rect id="Rectangle_97" data-name="Rectangle 97" width="32" height="32" transform="translate(33 80)" fill="none"/>
+    <path id="eye-solid" d="M19.88,70.16A11.137,11.137,0,0,0,10,64,11.138,11.138,0,0,0,.121,70.16a1.123,1.123,0,0,0,0,1.014A11.137,11.137,0,0,0,10,77.333a11.138,11.138,0,0,0,9.879-6.16,1.123,1.123,0,0,0,0-1.014ZM10,75.667a5,5,0,1,1,5-5A5,5,0,0,1,10,75.667Zm0-8.333a3.31,3.31,0,0,0-.879.132A1.661,1.661,0,0,1,6.8,69.788,3.326,3.326,0,1,0,10,67.333Z" transform="translate(38.999 25)" fill="#fff"/>
+  </g>
+</svg>

@@ -1,0 +1,174 @@
+@media only screen and (max-width : 320px) {
+    .search {
+      width: 30%;
+    }
+  
+    .logo {
+      width: 20%;
+      margin-left: 16px;
+    }
+  
+    .admin-role.show {
+      display:none !important;
+    }
+  
+    .bannerLeft, .bannerRight, .imgMain {
+        width:100%;
+    }
+  
+    .bannerRight {
+      margin-bottom:88%;
+    }
+  
+    .bannerLeft .partOne {
+      margin-left:24px;
+      width: 53%;
+      padding-right: 25px;
+    }
+  
+    .bannerLeft .partTwo {
+      width: 30%;
+    }
+  
+    .bannerLeft .partOne h3, .bannerLeft .partTwo h3, .bannerLeft .partTwo p ,.headerItems h3   {
+      font-size: 12px;
+    }
+    .partTwo .rating-average {
+      margin-left: -95% !important;
+    }
+  
+    .partTwo span.thumbs-up-like {
+      width: 24px;
+      height: 24px;
+      background-size: 24px 24px;
+      top: -6px;
+    }
+  
+    .bannerLeft .partOne p {
+      font-size: 10px;
+    }
+  
+    .partTwo .rating.star span {
+      height: 12px;
+      width: 12px;
+      background-size: 16px 16px;
+    }
+  
+    footer .social-media-links span {
+      padding: 13px 13px;
+      width: 6px !important;
+      height: 6px !important;
+    }
+    footer .social-media-links {
+      margin-left: 0px;
+      width: 54%;
+    }
+  
+  footer .footer-div {
+      padding:3px 3px 0px 3px;
+  }
+  
+  footer .copt-rights {
+    width:42%;
+  }
+  
+  footer .copt-rights span {
+      font-size:9px;
+  }
+  
+  footer .footer-tek-logo {
+    display:none;
+  }
+  
+  .left-content, .right-content  {
+    width:100%;
+  }
+  
+  .uploader-detail .profile-name {
+      font-size:12px;
+  }
+  
+  .play-descriptions .views-rating-row  {
+    width:100%;
+  }
+  
+  .play-descriptions .btns-row  {
+    width:100%;
+    margin-bottom:10px;
+  }
+  .comment-section textarea {
+    width: 87% !important;
+  }
+  #all_posted_comments {
+    width:100%;
+  }
+  
+  .videos-list .video {
+    width:48%;
+    display:inline-block;
+  }
+  .videos-list .video-content:not(:nth-child(1)) { 
+    width:48%;
+    display:inline-block;
+  }
+  
+  .videos-list .rating-and-length-block .rating-count {
+    width: 55%;
+  }
+  
+  .video-content .video-title {
+      font-size:12px;
+  }
+  
+  .top-results-block .search-results-keyword {
+      font-size:12px;
+      width:52%;
+      padding-left:0px;
+  }
+  
+  .top-results-block .search-results-count  {
+    font-size:12px;
+    width:46%;
+  }
+  
+  section.search-container {
+    padding:16px;
+  }
+  
+  .videos-list .video img { 
+    width:100%;
+  }
+  .rating-stars span.star {
+    width: 16px;
+      height: 16px;
+      background-size: 18px 18px;
+  }
+  
+  .views-rating-row .video-likes { 
+      margin-left:32px;
+  }
+  
+  .thumbnails {
+    width: 40%;
+    padding: 0px 12px;
+  }
+  
+  .thumbnail-lists .rating-and-length-block {
+    top:80px;
+    width:100%;
+  }
+  .thumbnail-lists .rating-and-length-block .rating-count {
+    width: 42%;
+  }
+  
+  .thumbnail-lists .rating-and-length-block .play-length {
+    width: 32%;
+  }
+  .thumbnail-lists img {
+    width:100%;
+  }
+  .header-menu-text {
+    display:none;
+  }
+  
+  }

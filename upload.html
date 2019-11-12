@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tektv</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="mainContainer">
+        <header>
+            <div class="logo">
+                <a href="https://allegiscloud.sharepoint.com/teams/TEK-tv/SitePages/Home.aspx"><div class="logoIcon"></div></a>
+            </div>
+            <div class="search">
+                <input type="text" name="search" id="search" placeholder="Search">
+                <span class="search-icon"></span>
+            </div>
+            <div class="profile">
+                <a href="#" class="uploadIcon"></a>
+                <span class="profilePhoto">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="">
+                </span>
+            </div>
+        </header>
+        <section class="upload-container">
+            <form class="upload-form">
+                <div id="drop-area">
+                    <div class="drag-drop-inner-form">
+                        <p class="big-upload-icon animated bounce"></p>
+                        <p>Drop your Video here</p>
+                        <p>or</p>
+                        <input type="file" id="fileElem" accept="video/mp4,video/x-m4v,video/*" onchange="handleFiles(this.files)">
+                        <label class="button browse-btn" for="fileElem">Browse</label>
+                    </div>
+                    <progress id="progress-bar" max=100 value=0></progress>
+                    <div id="gallery" ></div>
+                  
+                </div>
+                <div id="form-area">
+                    <h4>VIDEO DETAILS</h4>
+                    <div class="form-group">
+                        <label>Name of Video</label>
+                        <input type="text" name="video_name" placeholder="Name" />
+                    </div>
+                    <div class="form-group">
+                        <label>Tags</label>
+                        <input type="text" name="video_tags" placeholder="Start typing Tags" />
+                    </div>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea name="video_description" placeholder="About the Video"></textarea>
+                    </div>
+                </div>
+                <div class="row form-btns-area">
+                    <div class="form-bottom-left">
+                        <p>* Uploaded videos will be sent to Admin for Reviewing.</p>
+                    </div>
+                    <div class="form-bottom-right">
+                        <button type="button" class="btn reset-btn">Reset</button>
+                        <button type="button" class="btn upload-btn">Upload</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <div class="clearfix"></div>
+        <footer>
+            <div class="footer-div social-media-links">
+                <span class="facebook-icon"></span>
+                <span class="linkedin-icon"></span>
+                <span class="youtube-icon"></span>
+                <span class="twitter-icon"></span>
+                <span class="instagram-icon"></span>
+            </div>
+            <div class="footer-div copt-rights">
+                <span>Copyrights 2019 All Rights Reserved by TEKsystems Global Services Pvt Ltd.</span>
+            </div>
+            <div class="footer-div footer-tek-logo">
+                <img src="./assets/tgs_white.png" alt="tek-logo">
+            </div>
+        </footer>
+    </div>
+    <script type="text/javascript">
+        let dropArea = document.getElementById("drop-area")
+
+            // Prevent default drag behaviors
+            ;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+                dropArea.addEventListener(eventName, preventDefaults, false)
+                document.body.addEventListener(eventName, preventDefaults, false)
+            })
+
+            // Highlight drop area when item is dragged over it
+            ;['dragenter', 'dragover'].forEach(eventName => {
+                dropArea.addEventListener(eventName, highlight, false)
+            })
+
+            ;['dragleave', 'drop'].forEach(eventName => {
+                dropArea.addEventListener(eventName, unhighlight, false)
+            })
+
+        // Handle dropped files
+        dropArea.addEventListener('drop', handleDrop, false)
+
+        function preventDefaults(e) {
+            e.preventDefault()
+            e.stopPropagation()
+        }
+
+        function highlight(e) {
+            dropArea.classList.add('highlight')
+        }
+
+        function unhighlight(e) {
+            dropArea.classList.remove('active')
+        }
+
+        function handleDrop(e) {
+            var dt = e.dataTransfer
+            var files = dt.files
+
+            handleFiles(files)
+        }
+
+        let uploadProgress = []
+        let progressBar = document.getElementById('progress-bar')
+
+        function initializeProgress(numFiles) {
+            progressBar.value = 0
+            uploadProgress = []
+            progressBar.classList.add("uploading");
+            for (let i = numFiles; i > 0; i--) {
+                uploadProgress.push(0)
+            }
+        }
+
+        function updateProgress(fileNumber, percent) {
+            uploadProgress[fileNumber] = percent
+            let total = uploadProgress.reduce((tot, curr) => tot + curr, 0) / uploadProgress.length
+            console.debug('update', fileNumber, percent, total)
+            progressBar.value = total
+            if(total==100){
+                progressBar.classList.remove("uploading");
+            }
+        }
+
+        function handleFiles(files) {
+            files = [...files]
+            initializeProgress(files.length)
+            files.forEach(uploadFile)
+            files.forEach(previewFile)
+        }
+
+        function previewFile(file) {
+            let reader = new FileReader()
+            reader.readAsDataURL(file)
+            reader.onloadend = function () {
+                let video = document.createElement('video')
+                video.src = reader.result
+                document.getElementById('gallery').appendChild(video)
+            }
+        }
+
+        function uploadFile(file, i) {
+            var url = 'https://api.cloudinary.com/v1_1/joezimim007/image/upload'
+            var xhr = new XMLHttpRequest()
+            var formData = new FormData()
+            xhr.open('POST', url, true)
+            xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest')
+
+            // Update progress (can be used to show progress indicator)
+            xhr.upload.addEventListener("progress", function (e) {
+                updateProgress(i, (e.loaded * 100.0 / e.total) || 100)
+            })
+
+            xhr.addEventListener('readystatechange', function (e) {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    updateProgress(i, 100) // <- Add this
+                }
+                else if (xhr.readyState == 4 && xhr.status != 200) {
+                    // Error. Inform the user
+                }
+            })
+
+            formData.append('upload_preset', 'ujpu6gyk')
+            formData.append('file', file)
+            xhr.send(formData)
+        }
+    </script>
+</body>
+
+</html>

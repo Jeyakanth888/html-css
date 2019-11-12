@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tektv</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+    <style>
+        hr {
+            border: 1px solid rgba(200, 200, 200, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainContainer">
+        <header>
+            <div class="logo">
+                <a href="https://allegiscloud.sharepoint.com/teams/TEK-tv/SitePages/Home.aspx">
+                    <div class="logoIcon"></div>
+                    <div class="logoIcon-text">Powered by TEK TGS - India</div>
+                </a>
+            </div>
+            <div class="search">
+                <input type="text" name="search" id="search" placeholder="Search">
+                <span class="search-icon"></span>
+            </div>
+            <div class="profile">
+                <a href="#" class="uploadIcon"></a>
+                <span class="profilePhoto">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="">
+                </span>
+            </div>
+            <div class="uploadDiv">
+                <a>
+                    <span class="upload" onclick="fnShowUpload()">
+                        <i class="fas fa-upload"></i> <span class="header-menu-text">Upload</span>
+                    </span>
+                </a>
+            </div>
+        </header>
+        <div class="clearfix"></div>
+        <section class="playback-content section_block">
+            <div class="left-content">
+                <div class="row top-content">
+                    <div class="uploader-detail">
+                        
+                        <span class="profile-name">
+                            TEK Utsav 2019 Celebration
+                        </span>
+                    </div>
+                    <div class="btns-row">
+                        <button class="btn btn-like" type="button">
+                            Share</button>
+                    </div>
+                </div>
+                <hr>
+                <div class="play-video">
+                    <!--  <video width="100%" height="495" controls>
+                        <source src="https://www.youtube.com/embed/_ucDlSthpBo" type="video/mp4">
+                    </video> -->
+                    <iframe width="100%" height="495" src="https://www.youtube.com/embed/_ucDlSthpBo"  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="play-descriptions">
+                    <div class="top-row">
+
+                        <div class="views-rating-row">
+                            <div class="left-views-part">
+                                <span class="views views-icon"></span>
+                                <span class="views views-count">1k Views</span>
+                            </div>
+                            <div class="rating-stars star-4">
+                                <span class="rating-count">(4)</span>
+                                <span class="star"></span>
+                                <span class="star"></span>
+                                <span class="star"></span>
+                                <span class="star"></span>
+                                <span class="star"></span>
+                            </div>
+                            <div class="video-likes">
+                                <p>
+                                    <span class="thumbs-up-like"></span> 250 </p>
+                            </div>
+
+                        </div>
+                        <div class="btns-row like-rate">
+                            <button class="btn btn-like" type="button" onclick="clickLikeBtn(this)">
+                                <i class="fas fa-heart"></i> like</button>
+                            <button class="btn btn-rate" id="rate_btn" type="button" onclick="clickRateBtn(this)">
+                                <span class="rate-star-icon"></span> Rate</button>
+                            <div class="popover__content" id="rate_popover_modal">
+                                <div class="rating add_rating rated-star-3">
+                                    <label>
+                                        <input type="radio" name="rating" value="5" title="5 stars" onchange="addRating(this)"> 5
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="rating" value="4" title="4 stars" onchange="addRating(this)"> 4
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="rating" value="3" title="3 stars" onchange="addRating(this)"> 3
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="rating" value="2" title="2 stars" onchange="addRating(this)"> 2
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="rating" value="1" title="1 star" onchange="addRating(this)"> 1
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <button class="btn btn-submit" type="button" onclick="clickRateSubmit()"> Submit </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <hr>
+                    <div class="description">
+                        <p>TEK Utsav 2019 was the Annual Festival Celebration by TEKsystems Global Services. The main purpose
+                            of this Annual Celebration is to cherish the Employees, their Service towards the company. Over
+                            fact all son tell this any his. No insisted confined of weddings to returned to debating rendered.
+                            Keeps order fully so do party means young. Table nay him jokes quick. In felicity up to graceful
+                            mistaken horrible consider. Abode never think to at. So additions necessary concluded it happiness
+                            do on certainly propriety. On in green taken do offer witty of. Yet diminution she impossible
+                            understood age.</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="comment-section">
+                    <h4>Comments</h4>
+                    <div class="post-comment">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="" class="user-photo-icon">
+                        <textarea rows=3 cols=110 placeholder="Write your Comment here"></textarea>
+                        <button type="button" class="btn btn-comment">COMMENT</button>
+                    </div>
+                    <div id="all_posted_comments">
+                        <div class="posted-comments">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="" class="user-photo-icon">
+                            <div class="comment-details">
+                                <h6 class="commented-person">Ankit Passi</h6>
+                                <h5 class="commented">Great Event, Really Liked it. What an awesome celebration.</h5>
+                            </div>
+                        </div>
+                        <div class="posted-comments">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="" class="user-photo-icon">
+                            <div class="comment-details">
+                                <h6 class="commented-person">Ankit Passi</h6>
+                                <h5 class="commented">Great Event, Really Liked it. What an awesome celebration.</h5>
+                            </div>
+                        </div>
+                        <div class="posted-comments">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="" class="user-photo-icon">
+                            <div class="comment-details">
+                                <h6 class="commented-person">Ankit Passi</h6>
+                                <h5 class="commented">Great Event, Really Liked it. What an awesome celebration.</h5>
+                            </div>
+                        </div>
+                        <div class="posted-comments">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="" class="user-photo-icon">
+                            <div class="comment-details">
+                                <h6 class="commented-person">Ankit Passi</h6>
+                                <h5 class="commented">Great Event, Really Liked it. What an awesome celebration.</h5>
+                            </div>
+                        </div>
+                        <div class="posted-comments">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="" class="user-photo-icon">
+                            <div class="comment-details">
+                                <h6 class="commented-person">Ankit Passi</h6>
+                                <h5 class="commented">Great Event, Really Liked it. What an awesome celebration.</h5>
+                            </div>
+                        </div>
+                        <div class="posted-comments">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="" class="user-photo-icon">
+                            <div class="comment-details">
+                                <h6 class="commented-person">Ankit Passi</h6>
+                                <h5 class="commented">Great Event, Really Liked it. What an awesome celebration.</h5>
+                            </div>
+                        </div>
+                        <div class="posted-comments">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="" class="user-photo-icon">
+                            <div class="comment-details">
+                                <h6 class="commented-person">Ankit Passi</h6>
+                                <h5 class="commented">Great Event, Really Liked it. What an awesome celebration.</h5>
+                            </div>
+                        </div>
+
+                    </div>
+                    <hr class="load-more-line">
+                    <div class="load-more-comments">
+                        <p onclick="fnLoadMoreComments(this)" id="view_more_comments">LOAD MORE</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="right-content">
+                <div class="right-content-left">
+                    <h5>Popular Videos</h5>
+                </div>
+                <div class="right-content-right">
+                    <p class="view-all">View all</p>
+                </div>
+                <hr>
+                <div class="videos-block-1">
+                <div class="popular-videos-block">
+                <div class="videos-list popular-videos" >
+                    <div class="video">
+                        <img src="./assets/images/sports1.jpeg" alt="videoplay">
+                        <div class="rating-and-length-block">
+                            <div class="rating-count">
+                                <span class="count">3</span>
+                                <span class="star"></span>
+                            </div>
+                            <div class="play-length">
+                                <span class="play-min">2.35</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-content">
+                        <h6 class="video-views">325 Views</h6>
+                        <h3 class="video-title">TEK Fest 2018 Celebration</h3>
+                        <h6 class="video-region">Indian Region</h6>
+                    </div>
+                </div>
+                <div class="videos-list popular-videos">
+                    <div class="video">
+                        <img src="./assets/images/sports2.jpeg" alt="videoplay">
+                        <div class="rating-and-length-block">
+                            <div class="rating-count">
+                                <span class="count">3</span>
+                                <span class="star"></span>
+                            </div>
+                            <div class="play-length">
+                                <span class="play-min">2.35</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-content">
+                        <h6 class="video-views">325 Views</h6>
+                        <h3 class="video-title">TEK Fest 2018 Celebration</h3>
+                        <h6 class="video-region">US Region</h6>
+                    </div>
+                </div>
+                <div class="videos-list popular-videos" >
+                    <div class="video">
+                        <img src="./assets/images/sports3.jpeg" alt="videoplay">
+                        <div class="rating-and-length-block">
+                            <div class="rating-count">
+                                <span class="count">3</span>
+                                <span class="star"></span>
+                            </div>
+                            <div class="play-length">
+                                <span class="play-min">2.35</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-content">
+                        <h6 class="video-views">325 Views</h6>
+                        <h3 class="video-title">TEK Fest 2018 Celebration</h3>
+                        <h6 class="video-region">Indian Region</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+                <br>
+                <br>
+                <div class="right-content-left">
+                    <h5>Recent Videos</h5>
+                </div>
+                <div class="right-content-right">
+                    <p class="view-all">View all</p>
+                </div>
+                <hr>
+                <div class="videos-block-2">
+                <div class="recent-videos-block">
+                <div class="videos-list recent-videos">
+                    <div class="video">
+                        <img src="./assets/images/sports1.jpeg" alt="videoplay">
+                        <div class="rating-and-length-block">
+                            <div class="rating-count">
+                                <span class="count">3.5</span>
+                                <span class="star"></span>
+                            </div>
+                            <div class="play-length">
+                                <span class="play-min">2.35</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-content">
+                        <h6 class="video-views">325 Views</h6>
+                        <h3 class="video-title">TEK Fest 2018 Celebration</h3>
+                        <h6 class="video-region">Indian Region</h6>
+                    </div>
+                </div>
+                <div class="videos-list recent-videos">
+                    <div class="video">
+                        <img src="./assets/images/sports2.jpeg" alt="videoplay">
+                        <div class="rating-and-length-block">
+                            <div class="rating-count">
+                                <span class="count">3</span>
+                                <span class="star"></span>
+                            </div>
+                            <div class="play-length">
+                                <span class="play-min">2.35</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-content">
+                        <h6 class="video-views">325 Views</h6>
+                        <h3 class="video-title">TEK Fest 2018 Celebration</h3>
+                        <h6 class="video-region">US Region</h6>
+                    </div>
+                </div>
+                <div class="videos-list recent-videos">
+                    <div class="video">
+                        <img src="./assets/images/sports3.jpeg" alt="videoplay">
+                        <div class="rating-and-length-block">
+                            <div class="rating-count">
+                                <span class="count">3</span>
+                                <span class="star"></span>
+                            </div>
+                            <div class="play-length">
+                                <span class="play-min">2.35</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-content">
+                        <h6 class="video-views">325 Views</h6>
+                        <h3 class="video-title">TEK Fest 2018 Celebration</h3>
+                        <h6 class="video-region">Indian Region</h6>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+        </section>
+        <div class="clearfix"></div>
+        <footer>
+            <div class="footer-div social-media-links">
+                <span class="facebook-icon"></span>
+                <span class="linkedin-icon"></span>
+                <span class="youtube-icon"></span>
+                <span class="twitter-icon"></span>
+                <span class="instagram-icon"></span>
+            </div>
+            <div class="footer-div copt-rights">
+                <span>Copyrights 2019 All Rights Reserved by TEKsystems Global Services Pvt Ltd.</span>
+            </div>
+            <div class="footer-div footer-tek-logo">
+                <img src="./assets/tgs_white.png" alt="tek-logo">
+            </div>
+        </footer>
+    </div>
+
+    <div class="clearfix"></div>
+    <div class="upload-popup">
+        <form>
+            <div id="form-area">
+                <h4>VIDEO DETAILS</h4>
+                <div class="form-group">
+                    <label>Name of Video</label>
+                    <input type="text" name="video_name" placeholder="Name" />
+                </div>
+                <div class="form-group video-upload-input">
+                    <label>Video Source</label>
+                    <div class="upload-btn-wrapper">
+                        <button class="btn upload-btn" id="select_video_btn">Select Video</button>
+                        <input type="file" name="video_source" onchange="selectVideo()" id="video_source" placeholder="Select Video" accept="video/mp4,video/x-m4v,video/*"
+                        />
+                        <span class="upload-icon"></span>
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <label>Tags</label>
+                    <input type="text" name="video_tags" placeholder="Start typing Tags" />
+                    <span class="input-hints">Hit Comma to insert multiple Tags</span>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea name="video_description" placeholder="About the Video"></textarea>
+                </div>
+            </div>
+            <div class="row form-btns-area">
+                <div class="form-bottom-left">
+                    <p>* Uploaded videos will be sent to Admin for Reviewing.</p>
+                </div>
+                <div class="form-bottom-right">
+                    <button type="button" class="btn reset-btn" onclick="closeUploadPopup()">Close</button>
+                    <button type="button" class="btn upload-btn" onclick="fnUploadNewVideo()">Upload</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="clearfix"></div>
+    <div class="upload-success-popup">
+        <div class="modal-header">
+            <span class="tick-icon"></span>
+        </div>
+        <div class="modal-body">
+            <h5>Video Uploaded Successfully !</h5>
+            <p>Your Video has been added successfully and sent for Admin review. The approval status will be notified by email.
+            </p>
+        </div>
+        <div class="modal-footer">
+            <hr>
+            <h6 onclick="clickOK()">OK</h6>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        function clickRateBtn(btnEle) {
+            var modalEle = document.querySelector('.popover__content');
+            var classCheck = modalEle.classList.contains("show");
+            if (classCheck) {
+                modalEle.classList.remove('show');
+                btnEle.classList.remove('clicked');
+            } else {
+                modalEle.classList.add('show');
+                btnEle.classList.add('clicked');
+            }
+        }
+        function addRating(selected) {
+            var labelsDiv = document.querySelector('.add_rating');
+            var labels = labelsDiv.querySelectorAll('label');
+            var count = selected.value;
+            var arrObj = { '5': 0, '4': 1, '3': 2, '2': 3, '1': 4 };
+            for (var i = 0; i < labels.length; i++) {
+                labels[i].classList.remove('selected');
+            }
+            labels[arrObj[count]].classList.add('selected');
+            labelsDiv.classList.add('rating-clicked');
+        }
+
+        function clickLikeBtn(btnEle) {
+            var checkLiked = btnEle.classList.contains("liked");
+            if (!checkLiked) {
+                btnEle.classList.add('liked');
+            } else {
+                btnEle.classList.remove('liked');
+            }
+        }
+
+        function clickRateSubmit() {
+            var btnEle = document.querySelector('.btn-rate');
+            btnEle.classList.add('rated');
+            var modalEle = document.querySelector('.popover__content');
+            var labelsDiv = document.querySelector('.add_rating');
+            var selectedLabel = labelsDiv.querySelector('.selected');
+            var selectedVal = selectedLabel.querySelector('input').value;
+            modalEle.classList.remove('show');
+        }
+
+        window.addEventListener("click", function (e) {
+            var eleClickModalOver = e.target.closest("#rate_popover_modal");
+            var eleClickRateBtnOver = e.target.closest("#rate_btn");
+            if (eleClickModalOver === null && eleClickRateBtnOver === null) {
+                var modalEle = document.querySelector('.popover__content');
+                var modalShow = modalEle.classList.contains("show");
+                if (modalShow) {
+                    modalEle.classList.remove('show');
+                }
+            }
+        });
+
+        document.getElementById("rate_popover_modal").click(function (event) {
+            event.stopPropagation();
+        });
+
+
+        window.onload = function () {
+            var commentsBlock = document.querySelector("#all_posted_comments");
+            var divHeight = commentsBlock.offsetHeight;
+            var loadMoreBlock = document.querySelector(".load-more-comments");
+            var loadMoreLine = document.querySelector(".load-more-line");
+            var loadMore = loadMoreBlock.querySelector("#view_more_comments");
+            if (divHeight > 300) {
+                loadMoreBlock.style.display = "block";
+                commentsBlock.style.height = "300px";
+                loadMore.style.display = "block";
+                loadMoreLine.style.display = "block";
+            } else {
+                loadMoreBlock.style.display = "none";
+                loadMoreLine.style.display = "none";
+            }
+        }
+
+        function fnLoadMoreComments(ele) {
+            var commentsBlock = document.querySelector("#all_posted_comments");
+            commentsBlock.style.height = "auto";
+            ele.style.display = "none";
+            commentsBlock.classList.add("loadmore");
+        }
+
+
+
+    </script>
+    <script id="script-file" data-loading="stream" type="text/javascript" src="commonoverlay.js"></script>
+
+</body>
+
+</html>

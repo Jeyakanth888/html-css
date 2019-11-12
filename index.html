@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tektv</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="mainContainer">
+        <header>
+            <div class="logo">
+                <a href="https://allegiscloud.sharepoint.com/teams/TEK-tv/SitePages/Home.aspx">
+                    <div class="logoIcon"></div>
+                    <div class="logoIcon-text">Powered by TEK TGS - India</div>
+                </a>
+            </div>
+            <div class="search">
+                <input type="text" name="search" id="search" placeholder="Search">
+                <span class="search-icon"></span>
+            </div>
+            <div class="admin-role show">
+                <p>
+                    <span class="admin-icon"></span> <span class="header-menu-text"> Admin Panel</span></p>
+            </div>
+            <div class="profile">
+                <a href="#" class="uploadIcon"></a>
+                <span class="profilePhoto">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="">
+                </span>
+            </div>
+            <div class="uploadDiv">
+                <span class="upload" onclick="fnShowUpload()">
+                    <i class="fas fa-upload"></i> <span class="header-menu-text"> Upload</span>
+                </span>
+            </div>
+        </header>
+        <section class="banner section_block">
+            <div class="bannerLeft">
+                <div class="playButton">
+                    <img src="./assets/play-solid.svg">
+                </div>
+                <img src="./assets/mainImage.jpg" alt="" class="imgMain">
+                <div class="bannerLeft-bottom">
+                    <div class="partOne">
+                        <h3>TEK Utsav 2019 Celeberation</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                    </div>
+                    <div class="partTwo">
+                        <h3>271
+                            <span class="thumbs-up-like"></span>
+                        </h3>
+                        <p class="rating-average">(4)</p>
+                        <div class="rating star star-4">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bannerRight">
+                <div class="container">
+                    <input type="radio" id="i1" class="image-slide" name="images" checked
+                        onclick="carouselClick(this)" />
+                    <input type="radio" id="i2" class="image-slide" name="images" onclick="carouselClick(this)" />
+                    <input type="radio" id="i3" class="image-slide" name="images" onclick="carouselClick(this)" />
+                    <input type="radio" id="i4" class="image-slide" name="images" onclick="carouselClick(this)" />
+                    <button type="button" class="btn btn-update"> Center Update</button>
+                    <div class="slide_img" id="one">
+                        <img src="./assets/EmployeePosterinvite4.png">
+                    </div>
+
+                    <div class="slide_img" id="two">
+                        <img src="./assets/0V6A3590.png">
+                    </div>
+
+                    <div class="slide_img" id="three">
+                        <img src="./assets/0V6A3590.png">
+                    </div>
+                    <div class="slide_img" id="four">
+                        <img src="./assets/0V6A3590.png">
+                        <!-- <label class="prev" for="i3"><span></span></label>
+                        <label class="next" for="i1"><span></span></label> -->
+                    </div>
+
+                    <div id="nav_slide">
+                        <label for="i1" class="dots" id="dot1"></label>
+                        <label for="i2" class="dots" id="dot2"></label>
+                        <label for="i3" class="dots" id="dot3"></label>
+                        <label for="i4" class="dots" id="dot4"></label>
+                    </div>
+
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </section>
+        <div class="sliderItems" id="first_slider">
+            <div class="headerItems">
+                <h3>RECENT UPLOADS</h3>
+                <div class="viewall">
+                    <a href="#">View All</a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="carousel js-product-carousel">
+                <div class="carousel__view">
+                    <span class="carousel__control js-carousel-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span href="#" class="carousel__control js-carousel-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </span>
+                    <ul class="product-list js-product-list">
+                        <li class="product-list__item">
+                            <div data-slide="1" class="product">
+                                <div class="dataSlide1">
+                                    <img src="./assets/0V6A3590.png">
+                                    <div class="rating-and-length-block">
+                                        <div class="rating-count">
+                                            <span class="count">3</span>
+                                            <span class="star"></span>
+                                        </div>
+                                        <div class="play-length">
+                                            <span class="play-min">2.35</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3>TEK TV Inaugaration</h3>
+                                <p>
+                                    It is a long established fact that a reader will be distracted by the readable
+                                    content of a page when looking at its layout.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="product-list__item">
+                            <div data-slide="2" class="product">
+                                <div class="dataSlide1">
+                                    <img src="./assets/0V6A3590.png">
+                                    <div class="rating-and-length-block">
+                                        <div class="rating-count">
+                                            <span class="count">3</span>
+                                            <span class="star"></span>
+                                        </div>
+                                        <div class="play-length">
+                                            <span class="play-min">2.35</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3>TEK TV Inaugaration</h3>
+                                <p>
+                                    It is a long established fact that a reader will be distracted by the readable
+                                    content of a page when looking at its layout.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="product-list__item">
+                            <div data-slide="3" class="product">
+                                <div class="dataSlide1">
+                                    <img src="./assets/0V6A3590.png">
+                                    <div class="rating-and-length-block">
+                                        <div class="rating-count">
+                                            <span class="count">3</span>
+                                            <span class="star"></span>
+                                        </div>
+                                        <div class="play-length">
+                                            <span class="play-min">2.35</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3>TEK TV Inaugaration</h3>
+                                <p>
+                                    It is a long established fact that a reader will be distracted by the readable
+                                    content of a page when looking at its layout.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="product-list__item">
+                            <div data-slide="4" class="product">
+                                <div class="dataSlide1">
+                                    <img src="./assets/0V6A3590.png">
+                                    <div class="rating-and-length-block">
+                                        <div class="rating-count">
+                                            <span class="count">3</span>
+                                            <span class="star"></span>
+                                        </div>
+                                        <div class="play-length">
+                                            <span class="play-min">2.35</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3>TEK TV Inaugaration</h3>
+                                <p>
+                                    It is a long established fact that a reader will be distracted by the readable
+                                    content of a page when looking at its layout.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="product-list__item">
+                            <div data-slide="5" class="product">
+                                <div class="dataSlide1">
+                                    <img src="./assets/0V6A3590.png">
+                                    <div class="rating-and-length-block">
+                                        <div class="rating-count">
+                                            <span class="count">3</span>
+                                            <span class="star"></span>
+                                        </div>
+                                        <div class="play-length">
+                                            <span class="play-min">2.35</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3>TEK TV Inaugaration</h3>
+                                <p>
+                                    It is a long established fact that a reader will be distracted by the readable
+                                    content of a page when looking at its layout.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="product-list__item">
+                            <div data-slide="6" class="product">
+                                <div class="dataSlide1">
+                                    <img src="./assets/0V6A3590.png">
+                                    <div class="rating-and-length-block">
+                                        <div class="rating-count">
+                                            <span class="count">3</span>
+                                            <span class="star"></span>
+                                        </div>
+                                        <div class="play-length">
+                                            <span class="play-min">2.35</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3>TEK TV Inaugaration</h3>
+                                <p>
+                                    It is a long established fact that a reader will be distracted by the readable
+                                    content of a page when looking at its layout.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="product-list__item">
+                            <div data-slide="7" class="product">
+                                <div class="dataSlide1">
+                                    <img src="./assets/0V6A3590.png">
+                                    <div class="rating-and-length-block">
+                                        <div class="rating-count">
+                                            <span class="count">3</span>
+                                            <span class="star"></span>
+                                        </div>
+                                        <div class="play-length">
+                                            <span class="play-min">2.35</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3>TEK TV Inaugaration</h3>
+                                <p>
+                                    It is a long established fact that a reader will be distracted by the readable
+                                    content of a page when looking at its layout.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="product-list__item">
+                            <div data-slide="8" class="product">
+                                <div class="dataSlide1">
+                                    <img src="./assets/0V6A3590.png">
+                                    <div class="rating-and-length-block">
+                                        <div class="rating-count">
+                                            <span class="count">3</span>
+                                            <span class="star"></span>
+                                        </div>
+                                        <div class="play-length">
+                                            <span class="play-min">2.35</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3>TEK TV Inaugaration</h3>
+                                <p>
+                                    It is a long established fact that a reader will be distracted by the readable
+                                    content of a page when looking at its layout.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="product-list__item">
+                            <div data-slide="9" class="product">
+                                <div class="dataSlide1">
+                                    <img src="./assets/0V6A3590.png">
+                                    <div class="rating-and-length-block">
+                                        <div class="rating-count">
+                                            <span class="count">3</span>
+                                            <span class="star"></span>
+                                        </div>
+                                        <div class="play-length">
+                                            <span class="play-min">2.35</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3>TEK TV Inaugaration</h3>
+                                <p>
+                                    It is a long established fact that a reader will be distracted by the readable
+                                    content of a page when looking at its layout.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="product-list__item">
+                            <div data-slide="10" class="product">
+                                <div class="dataSlide1">
+                                    <img src="./assets/0V6A3590.png">
+                                    <div class="rating-and-length-block">
+                                        <div class="rating-count">
+                                            <span class="count">3</span>
+                                            <span class="star"></span>
+                                        </div>
+                                        <div class="play-length">
+                                            <span class="play-min">2.35</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3>TEK TV Inaugaration</h3>
+                                <p>
+                                    It is a long established fact that a reader will be distracted by the readable
+                                    content of a page when looking at its layout.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="sliderItems popular-sliderItems one" id="second_slider">
+            <div class="headerItems">
+                <h3>POPULAR</h3>
+                <div class="viewall">
+                    <a href="#">View All</a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="carousel js-product-carousel">
+                <div class="carousel__view">
+                    <span class="carousel__control js-carousel-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span href="#" class="carousel__control js-carousel-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </span>
+                    <ul class="product-list js-product-list">
+                        <li class="product-list__item">
+                            <div data-slide="1" class="product">
+                                <div class="dataSlide1">
+                                    <img src="./assets/0V6A3590.png">
+                                    <div class="rating-and-length-block">
+                                        <div class="rating-count">
+                                            <span class="count">3</span>
+                                            <span class="star"></span>
+                                        </div>
+                                        <div class="play-length">
+                                            <span class="play-min">2.35</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3>TEK TV Inaugaration</h3>
+                                <p>
+                                    It is a long established fact that a reader will be distracted by the readable
+                                    content of a page when looking at its layout.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="product-list__item">
+                            <div data-slide="2" class="product">
+                                <div class="dataSlide1">
+                                    <img src="./assets/0V6A3590.png">
+                                    <div class="rating-and-length-block">
+                                        <div class="rating-count">
+                                            <span class="count">3</span>
+                                            <span class="star"></span>
+                                        </div>
+                                        <div class="play-length">
+                                            <span class="play-min">2.35</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3>TEK TV Inaugaration</h3>
+                                <p>
+                                    It is a long established fact that a reader will be distracted by the readable
+                                    content of a page when looking at its layout.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="product-list__item">
+                            <div data-slide="3" class="product">
+                                <div class="dataSlide1">
+                                    <img src="./assets/0V6A3590.png">
+                                    <div class="rating-and-length-block">
+                                        <div class="rating-count">
+                                            <span class="count">3</span>
+                                            <span class="star"></span>
+                                        </div>
+                                        <div class="play-length">
+                                            <span class="play-min">2.35</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3>TEK TV Inaugaration</h3>
+                                <p>
+                                    It is a long established fact that a reader will be distracted by the readable
+                                    content of a page when looking at its layout.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="product-list__item">
+                            <div data-slide="4" class="product">
+                                <div class="dataSlide1">
+                                    <img src="./assets/0V6A3590.png">
+                                    <div class="rating-and-length-block">
+                                        <div class="rating-count">
+                                            <span class="count">3</span>
+                                            <span class="star"></span>
+                                        </div>
+                                        <div class="play-length">
+                                            <span class="play-min">2.35</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3>TEK TV Inaugaration</h3>
+                                <p>
+                                    It is a long established fact that a reader will be distracted by the readable
+                                    content of a page when looking at its layout.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="product-list__item">
+                            <div data-slide="5" class="product">
+                                <div class="dataSlide1">
+                                    <img src="./assets/0V6A3590.png">
+                                    <div class="rating-and-length-block">
+                                        <div class="rating-count">
+                                            <span class="count">3</span>
+                                            <span class="star"></span>
+                                        </div>
+                                        <div class="play-length">
+                                            <span class="play-min">2.35</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3>TEK TV Inaugaration</h3>
+                                <p>
+                                    It is a long established fact that a reader will be distracted by the readable
+                                    content of a page when looking at its layout.
+                                </p>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <footer>
+            <div class="footer-div social-media-links">
+                <span class="facebook-icon"></span>
+                <span class="linkedin-icon"></span>
+                <span class="youtube-icon"></span>
+                <span class="twitter-icon"></span>
+                <span class="instagram-icon"></span>
+            </div>
+            <div class="footer-div copt-rights">
+                <span>Copyrights 2019 All Rights Reserved by TEKsystems Global Services Pvt Ltd.</span>
+            </div>
+            <div class="footer-div footer-tek-logo">
+                <img src="./assets/tgs_white.png" alt="tek-logo">
+            </div>
+        </footer>
+    </div>
+    <div class="clearfix"></div>
+    <div class="upload-popup">
+        <form>
+            <div id="form-area">
+                <h4>VIDEO DETAILS</h4>
+                <div class="form-group">
+                    <label>Name of Video</label>
+                    <input type="text" name="video_name" placeholder="Name" />
+                </div>
+                <div class="form-group video-upload-input">
+                    <label>Video Source</label>
+                    <div class="upload-btn-wrapper">
+                        <button class="btn upload-btn" id="select_video_btn">Select Video</button>
+                        <input type="file" name="video_source" onchange="selectVideo()" id="video_source"
+                            placeholder="Select Video" accept="video/mp4,video/x-m4v,video/*" />
+                        <span class="upload-icon"></span>
+                        <span class="input-hints"> Maximum File Size allowed is 200 MB</span>
+                        <span class="input-file-error hide"> The Selected File Size is larger than 200MB</span>
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <label>Tags</label>
+                    <input type="text" name="video_tags" placeholder="Start typing Tags" />
+                    <span class="input-hints">Hit Comma to insert multiple Tags</span>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea name="video_description" placeholder="About the Video"></textarea>
+                </div>
+            </div>
+            <div class="row form-btns-area">
+                <div class="form-bottom-left">
+                    <p>* Uploaded videos will be sent to Admin for Reviewing.</p>
+                </div>
+                <div class="form-bottom-right">
+                    <button type="button" class="btn reset-btn" onclick="closeUploadPopup()">Close</button>
+                    <button type="button" class="btn upload-btn" onclick="fnUploadNewVideo()">Upload</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="clearfix"></div>
+    <div class="upload-success-popup">
+        <div class="modal-header">
+            <span class="tick-icon"></span>
+        </div>
+        <div class="modal-body">
+            <h5>Video Uploaded Successfully !</h5>
+            <p>Your Video has been added successfully and sent for Admin review. The approval status will be notified by
+                email.
+            </p>
+        </div>
+        <div class="modal-footer">
+            <hr>
+            <h6 onclick="clickOK()">OK</h6>
+        </div>
+    </div>
+    <script>
+        /*  (function () {
+              var carousels = document.querySelectorAll('.js-product-carousel');
+              [].forEach.call(carousels, function (carousel) {
+                  carouselize(carousel);
+              });
+  
+          })();*/
+
+        window.onload = function () {
+            var carousels = document.querySelectorAll('.js-product-carousel');
+            [].forEach.call(carousels, function (carousel) {
+                carouselize(carousel);
+                hideCarouselControl(carousel);
+            });
+        }
+
+        function hideCarouselControl(carouselEle) {
+            var findEles = carouselEle.querySelector('.js-product-list');
+            var listsCount = findEles.querySelectorAll('.product').length;
+            var win_width = window.innerWidth;
+            var ItemCountOnDisplay;
+            if (win_width >= 480 && win_width <= 768) {
+                ItemCountOnDisplay = 2;
+            } else if (win_width <= 1024 && win_width >= 768) {
+                ItemCountOnDisplay = 4;
+            } else if (win_width > 1024) {
+                ItemCountOnDisplay = 6;
+            }
+            if (listsCount < ItemCountOnDisplay) {
+                var control_carouselPrev = carouselEle.querySelector('.js-carousel-prev');
+                var control_carouselNext = carouselEle.querySelector('.js-carousel-next');
+                control_carouselPrev.style.display = 'none';
+                control_carouselNext.style.display = 'none';
+            }
+        }
+
+        function carouselize(carousel) {
+            var productList = carousel.querySelector('.js-product-list');
+            var productListWidth = 0;
+            var productListSteps = 0;
+            var products = carousel.querySelectorAll('.product');
+            var productAmount = 0;
+            var productAmountVisible = 4;
+            var carouselPrev = carousel.querySelector('.js-carousel-prev');
+            var carouselNext = carousel.querySelector('.js-carousel-next');
+
+            //Count all the products
+            [].forEach.call(products, function (product) {
+                productAmount++;
+                productListWidth += 260;
+                productList.style.width = productListWidth + "px";
+            });
+
+            carouselNext.onclick = function () {
+                if (productListSteps < productAmount - productAmountVisible) {
+                    productListSteps++;
+                    moveProductList();
+                }
+            }
+            carouselPrev.onclick = function () {
+                if (productListSteps > 0) {
+                    productListSteps--;
+                    moveProductList();
+                }
+            }
+
+            function moveProductList() {
+                var countValue = 25;
+                var win_width = window.innerWidth;
+                var ItemCountOnDisplay;
+                if (win_width >= 480 && win_width <= 768) {
+                    ItemCountOnDisplay = 2;
+                } else if (win_width <= 1024 && win_width >= 768) {
+                    ItemCountOnDisplay = 4;
+                } else if (win_width > 1024) {
+                    ItemCountOnDisplay = 6;
+                }
+                if (products.length > ItemCountOnDisplay) {
+                    countValue = products.length * 15;
+                }
+                productList.style.transform = "translateX(-" + countValue * productListSteps + "px)";
+            }
+        }
+
+        function carouselClick(thisEle) {
+            var slides = document.querySelectorAll('.image-slide');
+            for (var x = 0; x < slides.length; x++) {
+                slides[x].removeAttribute("clicked");
+            }
+            thisEle.setAttribute("clicked", true);
+        }
+
+        let arrItems = ['i1', 'i2', "i3", "i4"];
+        let i = 1;
+        let scroll = setInterval(slideScroll, 5000);
+        function slideScroll() {
+            if (i == 4) {
+                i = 0;
+            }
+            var slides = document.querySelectorAll('.image-slide');
+            for (var x = 0; x < slides.length; x++) {
+                slides[x].removeAttribute("checked");
+                if (slides[x].getAttribute("clicked")) {
+                    i = x;
+                    slides[x].removeAttribute("clicked");
+                }
+            }
+            var b = document.querySelector("#" + arrItems[i]);
+            b.setAttribute("checked", "");
+            i++;
+        }
+    </script>
+    <script id="script-file" data-loading="home" type="text/javascript" src="commonoverlay.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tektv</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+
+<style>
+    body {
+        margin: 0px;
+        height: 0px;
+        background-color: #fff;
+        font-family: 'Lato', sans-serif;
+    }
+
+    .popup-modal-container.hide {
+        display: none !important;
+    }
+
+    .popup-modal-container.show {
+        display: block !important;
+    }
+
+    .popup-modal-container {
+        margin: 35px 32px;
+        width: 100%;
+        height: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.4);
+        width: 576px;
+        height: 378px;
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        margin-top: -189px;
+        margin-right: -288px;
+        z-index: 3;
+        border-radius: 5px;
+    }
+
+    .modal-header {
+        text-align: center;
+        background-color: rgba(17, 81, 115, 1) !important;
+        position: relative;
+        height: 112px;
+    }
+
+    .modal-body {
+        padding: 32px;
+        background-color: #fff;
+        padding-bottom: 0px;
+    }
+
+    .modal-body h5 {
+        color: #115173;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: left;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+    }
+
+    .modal-body p {
+        color: #787878;
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .modal-footer {
+        height: 72px;
+        padding: 32px;
+        padding-bottom: 0px;
+    }
+
+    .modal-footer h6 {
+        text-align: center;
+        color: #115173;
+        font-size: 20px;
+        margin-block-start: 25px;
+        margin-block-end: 0em;
+    }
+
+    .modal-header span.tick-icon {
+        position: absolute;
+        text-align: center;
+        width: 48px;
+        height: 48px;
+        vertical-align: middle;
+        background-color: #fff;
+        border-radius: 25px;
+        margin: 32px 0px;
+    }
+
+    .modal-header span.tick-icon:before {
+        content: "\2714";
+        color: #115173;
+        font-size: 36px;
+        position: absolute;
+        top: -2px;
+        right: 10px;
+    }
+</style>
+</head>
+<body>
+    <div class="popup-modal-container show">
+        <div class="modal-header">
+            <span class="tick-icon"></span>
+        </div>
+        <div class="modal-body">
+            <h5>Video Uploaded Successfully !</h5>
+            <p>Your Video has been added successfully and sent for Admin review. The approval status will be notified by email.</p>
+        </div>
+        <div class="modal-footer">
+            <hr>
+            <h6>OK</h6>
+        </div>
+    </div>
+</body>
+
+</html>
